@@ -1,0 +1,174 @@
+{
+  "providers": {
+    "deepseek": {
+      "baseUrl": "https://api.deepseek.com/v1",
+      "api": "openai-completions",
+      "apiKey": "$DS_API_KEY",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "DeepSeek Chat",
+          "input": ["text"],
+          "contextWindow": 65536,
+          "maxTokens": 8192,
+          "cost": { "input": 0.001, "output": 0.002, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "deepseek-reasoner",
+          "name": "DeepSeek Reasoner",
+          "input": ["text"],
+          "contextWindow": 65536,
+          "maxTokens": 8192,
+          "cost": { "input": 0.001, "output": 0.002, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": true,
+          "compat": {
+            "thinkingFormat": "deepseek"
+          }
+        }
+      ]
+    },
+    "fireworks": {
+      "baseUrl": "https://api.fireworks.ai/inference/v1",
+      "api": "openai-completions",
+      "apiKey": "$FIREWORKS_API_KEY",
+      "models": [
+        {
+          "id": "accounts/fireworks/models/llama-v3p1-405b-instruct",
+          "name": "Fireworks Llama 3.1 405B",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.002, "output": 0.006, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "accounts/fireworks/models/llama-v3p1-70b-instruct",
+          "name": "Fireworks Llama 3.1 70B",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.0004, "output": 0.0012, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "accounts/fireworks/models/qwen-72b-instruct",
+          "name": "Fireworks Qwen 72B",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.0004, "output": 0.0012, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        }
+      ]
+    },
+    "zai": {
+      "baseUrl": "https://api.zhipuai.cn/v4",
+      "api": "openai-completions",
+      "apiKey": "$ZAI_API_KEY",
+      "models": [
+        {
+          "id": "glm-4-flash",
+          "name": "Z-AI GLM 4 Flash",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 32000,
+          "cost": { "input": 0.0001, "output": 0.0002, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "glm-4-plus",
+          "name": "Z-AI GLM 4 Plus",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 32000,
+          "cost": { "input": 0.0003, "output": 0.0006, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": true,
+          "compat": {
+            "thinkingFormat": "zai"
+          }
+        },
+        {
+          "id": "glm-4-air",
+          "name": "Z-AI GLM 4 Air",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 32000,
+          "cost": { "input": 0.0002, "output": 0.0004, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        }
+      ]
+    },
+    "neuralwatt": {
+      "baseUrl": "https://api.neuralwatt.com/v1",
+      "api": "openai-completions",
+      "apiKey": "$NEURALWATT_API_KEY",
+      "models": [
+        {
+          "id": "glm-5.2",
+          "name": "NeuralWatt GLM 5.2",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.0005, "output": 0.0015, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": true,
+          "compat": {
+            "thinkingFormat": "neuralwatt"
+          }
+        },
+        {
+          "id": "meta-llama/Llama-3.3-70B-Instruct",
+          "name": "NeuralWatt Llama 3.3 70B",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.0003, "output": 0.0009, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "moonshotai/Kimi-K2",
+          "name": "NeuralWatt Kimi K2",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 8192,
+          "cost": { "input": 0.0003, "output": 0.0009, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        }
+      ]
+    },
+    "cohere": {
+      "baseUrl": "https://api.cohere.com/v2/chat",
+      "api": "openai-completions",
+      "apiKey": "$COHERE_API_KEY",
+      "models": [
+        {
+          "id": "command-a-plus-05-2026",
+          "name": "Cohere Command A+ (Latest)",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 65536,
+          "cost": { "input": 0.003, "output": 0.009, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": true
+        },
+        {
+          "id": "command-r-08-2024",
+          "name": "Cohere Command R 08-2024",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 4096,
+          "cost": { "input": 0.0006, "output": 0.0018, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        },
+        {
+          "id": "command-r-plus-08-2024",
+          "name": "Cohere Command R+ 08-2024",
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 4096,
+          "cost": { "input": 0.0012, "output": 0.0036, "cacheRead": 0, "cacheWrite": 0 },
+          "reasoning": false
+        }
+      ]
+    }
+  }
+}

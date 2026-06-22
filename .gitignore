@@ -1,0 +1,6 @@
+sessions/
+npm/
+bin/
+log/
+*.log
+auth.json
