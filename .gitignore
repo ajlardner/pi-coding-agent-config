@@ -4,3 +4,4 @@ bin/
 log/
 *.log
 auth.json
+.env
