@@ -1,7 +1,8 @@
-sessions/
-npm/
-bin/
-log/
-*.log
-auth.json
+.pi/agent/sessions/
+.pi/agent/npm/
+.pi/agent/bin/
+.pi/agent/log/
+.pi/agent/*.log
+.pi/agent/auth.json
 .env
+workspace/
