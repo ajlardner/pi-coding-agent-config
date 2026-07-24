@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.80.10",
+  "theme": "dark",
+  "defaultProvider": "openrouter",
+  "defaultModel": "anthropic/claude-fable-5",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:pi-web-access"
+  ],
+  "enableSkillCommands": false
+}
