@@ -1,5 +1,5 @@
-auth.json
 .env
 agent/*
 !agent/settings.json
 !agent/AGENTS.md
+!agent/models.json
