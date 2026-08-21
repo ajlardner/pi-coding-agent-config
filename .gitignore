@@ -3,3 +3,5 @@ agent/*
 !agent/settings.json
 !agent/AGENTS.md
 !agent/models.json
+!agent/themes
+
