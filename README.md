@@ -19,6 +19,9 @@ I use this configuration in conjunction with my [pi-coding-agent-sandbox repo](h
     - GLM 5.3
 - Moonshot Kimi
     - Kimi K3
+- Alibaba Cloud Qwen (run locally with llama.cpp)
+    - [Qwen3.8-27B-Q4.0](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF)
+    - [Qwen3.6-35B-A3B_MXFP4](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/)
 
 ## LLM Disclaimer
 This project uses LLM/AI-assisted development tools. See my [LLM usage policy](https://github.com/ajlardner/llm-policy) for details.
