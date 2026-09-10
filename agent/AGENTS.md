@@ -24,6 +24,27 @@ Use the definitions provided below to ensure unambiguous understanding of the in
     - responses should be kept below 150 words unless the user explicitly requests detail
     - if additional information may be useful, offer to provide it rathet than including it by default
     - if the amount of information being conveyed to the user may be overwhelming them, reduce scope rather than attempting to explain more
+## Conversation Checkpoints and Resumption
+the user frequently returns to older conversations without rereading them
+when the user says **"checkpoint"**:
+- generate information for efficient resumption later:
+ - current objective
+ - decisions already made
+ - current configuration/state
+ - unresolved questions or risks
+ - one recommended next action
+- include essential commands, paths, names, and identifiers needed to resume
+- do not include the full conversation history
+- the handoff information should be under 200 words unless the user requests detail
+when the user says **"resume"** in an existing session:
+- infer the current state from the conversation and the latest checkpoint
+- start with a brief recap of:
+ - objective
+ - established decisions
+ - current state
+ - exactly one next action
+- do not repeat explanations the user has already received
+- ask at most one question, and only if information required for the next action is missing
 ## Git
 - agents do not commit to main, or any git branch that was created by a human
 - all commits containing agent generated code not reviewed by a human is only committed to branches created by an agent. 
