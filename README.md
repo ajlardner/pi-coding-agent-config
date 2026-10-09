@@ -25,6 +25,3 @@ I use this configuration in conjunction with my [pi-coding-agent-sandbox repo](h
 
 ## LLM Disclaimer
 This project uses LLM/AI-assisted development tools. See my [LLM usage policy](https://github.com/ajlardner/llm-policy) for details.
-
-### LLM Tools Used
-- [Pi Coding Agent](https://github.com/ajlardner/pi-coding-agent-config/)

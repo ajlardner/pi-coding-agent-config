@@ -4,4 +4,7 @@ agent/*
 !agent/AGENTS.md
 !agent/models.json
 !agent/themes
-
+!agent/extensions
+agent/extensions/node_modules
+web-search.json
+web-fetch-cache/

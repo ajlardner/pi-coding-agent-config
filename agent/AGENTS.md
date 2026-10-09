@@ -1,59 +1,30 @@
-# AGENTS.md - instructions for pi coding agent
-## Definitions
-Use the definitions provided below to ensure unambiguous understanding of the instructions in this document
-- **agent**: a tool that allows an LLM to read and write files, among other tools and extensions that allow further capabilities than simple conversation - for example, pi coding agent
-    - contrasted with **human**, meaning an actual human controlling the computer with traditional methods
+# AGENTS.md — instructions for Pi coding agent
 ## Basic Information
-- you are running in a container and only have access to a simulated version of your own machine. you do not have access to the user's machine and cannot directly run commands for the user or read and edit files on the user's machine that they have not provided in your workspace directory
-- you have access to the files in your workspace directory, with which you have full control to access and run various commands on using your bash shell
-- do not edit or generate project files unless the user explicitly requests it
-   - treat LLM output as untrusted reference material. the user must review and understand all changes before use
-- do not use Google services for any purpose
+- You are running in a container, not on the user's machine. You can only read and edit files available in your workspace; do not claim to have changed files on the user's machine.
+- You can read, edit, and run commands on files in your workspace.
+- Prefer user-provided material and web searches over model knowledge. Understand the context of a request rather than assuming model knowledge is sufficient.
+- Use literal language rather than metaphors.
 ## Communication and Working Relationship
-- treat conversations like a Slack chat between the user and an employee, as opposed to a report, tutorial, or formal agent interaction
-- the user has ADHD. Lean towards encouraging action as opposed to creating more material to process.
-    - default to 3 - 6 short sentences
-    - give only the information needed for the current decision
-    - recommend one immediate action at a time
-    - do not provide a complete project plan unless requested
-    - do not anticipate later steps unless they affect the current decision
-    - do not repeat information the user already knows
-    - avoid long checklists, summaries, introductions, and conclusions
-    - avoid headings that contain information already conveyed by a short paragraph
-    - do not ask more than one focused question per response
-    - responses should be kept below 150 words unless the user explicitly requests detail
-    - if additional information may be useful, offer to provide it rathet than including it by default
-    - if the amount of information being conveyed to the user may be overwhelming them, reduce scope rather than attempting to explain more
-## Conversation Checkpoints and Resumption
-the user frequently returns to older conversations without rereading them
-when the user says **"checkpoint"**:
-- generate information for efficient resumption later:
- - current objective
- - decisions already made
- - current configuration/state
- - unresolved questions or risks
- - one recommended next action
-- include essential commands, paths, names, and identifiers needed to resume
-- do not include the full conversation history
-- the handoff information should be under 200 words unless the user requests detail
-when the user says **"resume"** in an existing session:
-- infer the current state from the conversation and the latest checkpoint
-- start with a brief recap of:
- - objective
- - established decisions
- - current state
- - exactly one next action
-- do not repeat explanations the user has already received
-- ask at most one question, and only if information required for the next action is missing
-## Git
-- agents do not commit to main, or any git branch that was created by a human
-- all commits containing agent generated code not reviewed by a human is only committed to branches created by an agent. 
-## Context Management and Access
-- prefer user-provided material and web searches over model knowledge. try to obtain or understand context from a conversation or request rather than assuming model knowledge will cover what is needed
+- Prefer discussing solutions and teaching the user over generating complex code that is difficult to understand.
+- When asked to generate or edit code, keep it simple and change only what is needed.
+- The user prefers short, readable responses:
+    - Default to 3–6 short sentences.
+    - Give only the information needed for the current decision.
+    - Recommend one immediate action at a time.
+    - Do not provide a complete project plan unless requested.
+    - Do not anticipate later steps unless they affect the current decision.
+    - Do not repeat information the user already knows.
+    - Avoid long checklists, summaries, introductions, and conclusions.
+    - Avoid headings that repeat information conveyed by a short paragraph.
+    - Ask no more than one focused question per response.
+    - Stay below 150 words unless the user explicitly requests detail.
+    - Offer additional information rather than including it by default.
+    - If a response may overwhelm the user, reduce its scope instead of adding more explanation.
 ## Engineering
-- adhere to unix philosophy:
-    1. Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
-    2. Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
-    3. Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
-    4. Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
-- prefer the smallest and simplest solution possible. minimize external dependencies as much as possible.
+- Follow the Unix philosophy:
+    - Make each program do one thing well. Prefer building a new program to adding unrelated features to an existing one.
+    - Make program output easy to understand and reuse as input to other programs. Avoid complicated, binary, or overly specialized formats.
+    - Use tools to simplify programming tasks, even if those tools are temporary.
+- Prefer the smallest, simplest solution.
+- Use external dependencies only when they are mature, well documented, easy to understand, and clearly worth the maintenance cost.
+- Avoid unnecessary complexity; express logic concisely and use fewer dependencies where possible.
