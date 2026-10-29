@@ -6,5 +6,6 @@ agent/*
 !agent/themes
 !agent/extensions
 agent/extensions/node_modules
+agent/extensions/package-lock.json
 web-search.json
 web-fetch-cache/
