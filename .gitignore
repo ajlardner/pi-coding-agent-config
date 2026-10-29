@@ -4,6 +4,7 @@ agent/*
 !agent/AGENTS.md
 !agent/models.json
 !agent/themes
+!agent/skills
 !agent/extensions
 agent/extensions/node_modules
 agent/extensions/package-lock.json
