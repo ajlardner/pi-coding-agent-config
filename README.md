@@ -7,21 +7,5 @@ See [the pi docs on providers](https://pi.dev/docs/latest/providers#api-keys) fo
 
 I use this configuration in conjunction with my [pi-coding-agent-sandbox repo](https://github.com/ajlardner/pi-coding-agent-sandbox).
 
-## Models I Use
-- Anthropic Claude
-    - Fable 5
-    - Opus 5
-- DeepSeek
-    - DeepSeek v4 Flash
-    - DeepSeek v4 Pro
-- Z.AI GLM
-    - GLM 5.2
-    - GLM 5.3
-- Moonshot Kimi
-    - Kimi K3
-- Alibaba Cloud Qwen (run locally with llama.cpp)
-    - [Qwen3.8-27B-Q4.0](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF)
-    - [Qwen3.6-35B-A3B_MXFP4](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/)
-
 ## LLM Disclaimer
 This project uses LLM/AI-assisted development tools. See my [LLM usage policy](https://github.com/ajlardner/llm-policy) for details.
